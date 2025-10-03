@@ -1,5 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Noto Serif JP", sans-serif;
+}
+
+h1, h2, p, a {
+    writing-mode: vertical-rl;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.right-to-left {
+    writing-mode: vertical-rl;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+
+.site-title {
+    font-size: 3rem;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 60px 80px 30px 40px;
+    background: url("../img/mainvisual-pc.jpg");
+    background-position: center;
+    color: #fff;
+}
+
+#header nav {
+    margin-right: 35px;
+    background: #00000033;
+    height: fit-content;
+    padding: 0 0 10px 10px;
+}
+
+#header nav li {
+    margin-right: 25px;
+}
+
+#header #goto-online-store-btn {
+    width: fit-content;
+    height: fit-content;
+    margin: auto auto 0 0;
+    padding: 8px;
+    background: #ffffff33;
+}
+
+#header #goto-online-store-btn .inner {
+    padding: 50px 25px;
+    border: 1px solid #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+    #header {
+        background: url("../img/mainvisual-sp.jpg");
+        background-position: center;
+    }
 }
