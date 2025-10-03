@@ -10,6 +10,7 @@ body {
     width: 100%;
     height: 100%;
     font-family: "Noto Serif JP", sans-serif;
+    background: #E6E2D7;
 }
 
 h1, h2, p, a {
@@ -25,8 +26,18 @@ a {
     color: #fff;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .right-to-left {
     writing-mode: vertical-rl;
+}
+
+.left-to-right {
+    writing-mode: vertical-lr;
 }
 
 .container {
@@ -36,6 +47,7 @@ a {
 
 
 .site-title {
+    height: fit-content;
     font-size: 3rem;
 }
 
@@ -44,6 +56,7 @@ a {
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    margin-bottom: 180px;
     padding: 60px 80px 30px 40px;
     background: url("../img/mainvisual-pc.jpg");
     background-position: center;
@@ -75,9 +88,137 @@ a {
 }
 
 
+main section {
+    width: 100%;
+    margin-bottom: 160px;
+}
+
+.section-title {
+    display: inline;
+    margin-bottom: 25px;
+    font-size: 1.35rem;
+}
+
+.section-title-en {
+    display: inline;
+}
+
+main section .content {
+    margin-top: 80px;
+}
+
+
+#news ul {
+    margin-right: 100px;
+    border-right: 1px solid #000;
+}
+
+#news ul li {
+    padding: 10px 30px;
+    border-left: 1px solid #000;
+}
+
+#news ul li .news-date {
+    font-size: 0.75rem;
+}
+
+#news ul li .news-title {
+    font-size: 1.2rem;
+}
+
+
+main section .content {
+    width: 70%;
+}
+
+main section .content .product {
+    position: relative;
+    margin: 0 20px;
+    width: 100%;
+}
+
+main section .content .product .product-img {
+    width: 100%;
+}
+
+section .content .product-detail {
+    display: flex;
+    width: calc(50% + 20px);
+    aspect-ratio: 8 / 3;
+    z-index: 1;
+}
+
+section .content .product-detail p {
+    max-width: 75%;
+    margin: auto;
+    writing-mode: horizontal-tb;
+    text-align: center;
+}
+
+
+section.right-to-left .product-img {
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+section.right-to-left .product-detail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+section.left-to-right .product-img {
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+section.left-to-right .product-detail {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+#create .product-detail {
+    background: #F9E90699;
+    color: #fff;
+}
+
+#science .product-detail {
+    background: #952A2699;
+    color: #fff;
+}
+
+
 @media screen and (max-width: 768px) {
     #header {
+        flex-direction: row;
         background: url("../img/mainvisual-sp.jpg");
         background-position: center;
+    }
+
+    #news ul li {
+        padding: 15px 10px;
+    }
+
+    #news ul li:nth-child(n + 4) {
+        display: none;
+    }
+
+    .section-title-en:nth-last-child(n + 2) {
+        display: none;
+    }
+
+    main section .content {
+        width: 90%;
+    }
+
+    .section-title {
+        display: block;
+        width: 10%;
+    }
+
+    main section .content .product {
+        margin: 0;
     }
 }
